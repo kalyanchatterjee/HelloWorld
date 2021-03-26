@@ -1,5 +1,7 @@
 # HelloWorld
 
+A simple project following a YouTube tutorial. Learning about using HTTP methods in Angular.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
 ## Development server
