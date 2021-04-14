@@ -1,0 +1,42 @@
+<hr />
+<h2>Zippy (Directives Practice)</h2>
+<div [ngSwitch]="viewMode">
+  <div class="card">
+    <div class="card-body" (click)="handleClick('shipping')">
+      <i
+        [ngClass]="{
+          'bi bi-arrows-expand': !isSDSelected,
+          'bi bi-arrows-collapse': isSDSelected
+        }"
+      ></i>
+      Shipping Details
+    </div>
+  </div>
+  <div *ngSwitchCase="'shipping'" class="card">
+    <div class="card-body">
+      Shipping Details - Lorem ipsum dolor, sit amet consectetur adipisicing
+      elit. Ratione eum atque adipisci odit, voluptatum ab laborum quae ad eos
+      voluptas cumque dignissimos officia recusandae ipsa vero esse iste. Nisi,
+      harum.
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body" (click)="handleClick('billing')">
+      <i
+        [ngClass]="{
+          'bi bi-arrows-expand': !isBDSelected,
+          'bi bi-arrows-collapse': isBDSelected
+        }"
+      ></i>
+      Billing Details
+    </div>
+  </div>
+  <div *ngSwitchCase="'billing'" class="card">
+    <div class="card-body">
+      Billing Details - Lorem ipsum dolor sit amet consectetur, adipisicing
+      elit. Rem natus expedita iusto libero ipsam iure atque officiis ex
+      blanditiis debitis.
+    </div>
+  </div>
+</div>
+<hr />

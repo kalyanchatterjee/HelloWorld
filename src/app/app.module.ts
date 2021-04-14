@@ -7,13 +7,21 @@ import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { ObservablesComponent } from './components/observables/observables.component';
 import { PostsComponent } from './components/posts/posts.component';
+import { DirectivesComponent } from './components/directives/directives.component';
+import { InputFormatDirective } from './directives/input-format.directive';
+import { ZippyComponent } from './components/zippy/zippy.component';
+import { CommentsFormComponent } from './components/comments-form/comments-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthorsComponent,
     ObservablesComponent,
-    PostsComponent
+    PostsComponent,
+    DirectivesComponent,
+    InputFormatDirective,
+    ZippyComponent,
+    CommentsFormComponent
   ],
   imports: [
     BrowserModule,
