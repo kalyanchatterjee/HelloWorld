@@ -24,6 +24,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     InputFormatDirective,
     ZippyComponent,
     CommentsFormComponent,
+    ContactFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
