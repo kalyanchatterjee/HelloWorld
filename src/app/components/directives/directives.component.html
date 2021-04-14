@@ -1,0 +1,4 @@
+<div *ngIf="courses.length > 0; else otherDiv">
+  There are courses available for you to take!
+</div>
+<ng-template #otherDiv> Currently there are no courses for you. </ng-template>
