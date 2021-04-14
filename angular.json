@@ -29,12 +29,20 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.css",
+<<<<<<< HEAD
               "./node_modules/bootstrap/dist/css/bootstrap.css",
               "./node_modules/bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
               "./node_modules/bootstrap/dist/js/bootstrap.js"
+=======
+              "node_modules/bootstrap/dist/css/bootstrap.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+>>>>>>> e91a1b8baaf58950078b4a444a35bf98a02b4c5a
             ]
           },
           "configurations": {
