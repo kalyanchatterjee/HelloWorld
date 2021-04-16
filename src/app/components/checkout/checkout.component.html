@@ -1,21 +1,14 @@
 <div>
   <form [formGroup]="cardForm">
-    <input formControlName="name" />
-    <br />
-    <ng-container *ngIf="cardForm.controls.name.errors">
-      <small *ngIf="cardForm.controls.name.errors.required">
-        Name is required
-      </small>
-      <small *ngIf="cardForm.controls.name.errors.minlength">
-        Name must be at least
-        {{ cardForm.controls.name.errors.minlength.requiredLength }} characters
-        in length.
-      </small>
-    </ng-container>
+    <!-- Passing 'nameControl' instead of 'name' -->
+    <app-input label="Name" [control]="nameControl"></app-input>
   </form>
 </div>
 
 <!-- Debugging -->
-<div>Form Contents: {{ cardForm.value | json }}</div>
-<div>Form is valid: {{ cardForm.valid }}</div>
-<div>Error: {{ cardForm.controls.name.errors | json }}</div>
+<hr />
+<small>
+  <div>Form Contents: {{ cardForm.value | json }}</div>
+  <div>Form is valid: {{ cardForm.valid }}</div>
+  <div>Error: {{ cardForm.controls.name.errors | json }}</div>
+</small>

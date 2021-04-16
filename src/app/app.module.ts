@@ -13,6 +13,7 @@ import { InputFormatDirective } from './directives/input-format.directive';
 import { ZippyComponent } from './components/zippy/zippy.component';
 import { CommentsFormComponent } from './components/comments-form/comments-form.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { InputComponent } from './components/input/input.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     ZippyComponent,
     CommentsFormComponent,
     CheckoutComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,

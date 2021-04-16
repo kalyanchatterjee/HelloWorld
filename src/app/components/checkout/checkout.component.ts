@@ -8,8 +8,16 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class CheckoutComponent implements OnInit {
   cardForm = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    name: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(60),
+      // Don't allow space
+      // Validators.pattern(/^\S*$/),
+    ]),
   });
+  // Workaround - create a variable and cast as FormControl
+  nameControl = this.cardForm.get('name') as FormControl;
 
   constructor() {}
 
