@@ -3,7 +3,7 @@
   <input
     class="form-control"
     type="text"
-    placeholder="Your name"
+    [placeholder]="placeholder"
     [formControl]="control"
     [ngClass]="{
       'alert alert-danger': control.dirty && control.touched && control.errors
@@ -11,13 +11,13 @@
   />
   <!-- Validation Errors -->
   <ng-container *ngIf="control.dirty && control.touched && control.errors">
-    <small *ngIf="control.errors.required">Name is required</small>
+    <small *ngIf="control.errors.required">Required</small>
     <small *ngIf="control.errors.minlength">
-      Name must be at least
+      Must be at least
       {{ control.errors.minlength.requiredLength }} characters in length.
     </small>
     <small *ngIf="control.errors.maxlength">
-      Name can be at most
+      Can be at most
       {{ control.errors.maxlength.requiredLength }} characters in length.
     </small>
     <small *ngIf="control.errors.pattern"> Invalid format </small>

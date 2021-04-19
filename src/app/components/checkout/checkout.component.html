@@ -1,7 +1,34 @@
 <div>
-  <form [formGroup]="cardForm">
+  <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
     <!-- Passing 'nameControl' instead of 'name' -->
-    <app-input label="Name" [control]="nameControl"></app-input>
+    <app-input
+      label="Name"
+      placeholder="John Doe"
+      [control]="nameControl"
+    ></app-input>
+    <app-input
+      label="Card Number"
+      placeholder="4444 5555 6666 7777"
+      [control]="cardNumberControl"
+    ></app-input>
+    <app-input
+      label="Expiry Date"
+      placeholder="MM/YY"
+      [control]="expirationControl"
+    ></app-input>
+    <app-input label="CVN" [control]="securityCodeControl"></app-input>
+    <button type="submit" class="btn btn-primary" [disabled]="cardForm.invalid">
+      Submit
+    </button>
+    <button
+      style="margin-left: 5px"
+      type="button"
+      class="btn btn-warning"
+      [disabled]="cardForm.invalid"
+      (click)="onResetClick()"
+    >
+      Reset
+    </button>
   </form>
 </div>
 
@@ -9,6 +36,7 @@
 <hr />
 <small>
   <div>Form Contents: {{ cardForm.value | json }}</div>
+  <div>Expiry Date: {{ cardForm.value.expiration }}</div>
   <div>Form is valid: {{ cardForm.valid }}</div>
   <div>Error: {{ cardForm.controls.name.errors | json }}</div>
 </small>
