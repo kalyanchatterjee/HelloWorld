@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Sandbox';
+
+  onTerm(term: string) {
+    console.log('Inside app.component.html ', term);
+  }
 }

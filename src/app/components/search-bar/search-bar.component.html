@@ -1,0 +1,12 @@
+<form (submit)="onFormSubmit($event)">
+  <div class="form-group" style="margin-top: 10px">
+    <input
+      type="text"
+      class="form-control"
+      id="termInput"
+      aria-describedby="searchTerm"
+      placeholder="Type search term"
+      (keyup)="handleChange($event)"
+    />
+  </div>
+</form>

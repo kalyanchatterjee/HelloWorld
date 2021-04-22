@@ -14,6 +14,8 @@ import { ZippyComponent } from './components/zippy/zippy.component';
 import { CommentsFormComponent } from './components/comments-form/comments-form.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { InputComponent } from './components/input/input.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { PageListComponent } from './components/page-list/page-list.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { InputComponent } from './components/input/input.component';
     CommentsFormComponent,
     CheckoutComponent,
     InputComponent,
+    SearchBarComponent,
+    PageListComponent,
   ],
   imports: [
     BrowserModule,
