@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Wikipost } from '../../wikipost';
 
 @Component({
   selector: 'page-list',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-list.component.css'],
 })
 export class PageListComponent implements OnInit {
-  constructor() {}
+  @Input() posts: Wikipost[];
+
+  constructor() {
+    this.posts = [];
+  }
 
   ngOnInit(): void {}
 }

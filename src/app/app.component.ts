@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { WikipediaService } from './services/wikipedia.service';
+import { Wikipost } from './wikipost';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +10,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Sandbox';
+  posts: Wikipost[];
+
+  constructor(private wikiservice: WikipediaService) {
+    this.posts = [];
+  }
 
   onTerm(term: string) {
-    console.log('Inside app.component.html ', term);
+    this.wikiservice.getPosts(term).subscribe((data: any) => {
+      console.log(data);
+      this.posts = data.query.search;
+    });
   }
 }
