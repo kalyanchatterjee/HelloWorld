@@ -6,8 +6,14 @@
       <th>Word Count</th>
     </tr>
     <tr *ngFor="let post of posts">
-      <td>{{ post.title }}</td>
-      <td>{{ post.snippet }}</td>
+      <td>
+        <a
+          [href]="'https://en.wikipedia.org/?curid=' + post.pageid"
+          target="_blank"
+          >{{ post.title }}</a
+        >
+      </td>
+      <td [innerHTML]="post.snippet"></td>
       <td>{{ post.wordcount }}</td>
     </tr>
   </table>

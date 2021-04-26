@@ -9,6 +9,13 @@ import { Wikipost } from '../wikipost';
 export class WikipediaService {
   constructor(private httpClient: HttpClient) {}
 
+  // How does a generic fuction look like?
+  /* 
+  function storeGenericValue<T>(value: T): [T] {
+    return [value]
+  }
+*/
+
   // https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=space&format=json&origin=*
   getPosts(term: string): Observable<Wikipost[]> {
     const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${term}&format=json&origin=*`;

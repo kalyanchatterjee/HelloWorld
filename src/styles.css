@@ -2,3 +2,8 @@
 body {
   padding: 20px;
 }
+
+/* Wikipedia snippet has a class called searchmatch */
+.searchmatch {
+  font-weight: bold;
+}
