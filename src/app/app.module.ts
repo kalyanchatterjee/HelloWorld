@@ -16,6 +16,9 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { InputComponent } from './components/input/input.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { PageListComponent } from './components/page-list/page-list.component';
+import { RandomPhotosComponent } from './components/random-photos/random-photos.component';
+import { RandomPhotosButtonComponent } from './components/random-photos-button/random-photos-button.component';
+import { RandomPhotosDisplayComponent } from './components/random-photos-display/random-photos-display.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { PageListComponent } from './components/page-list/page-list.component';
     InputComponent,
     SearchBarComponent,
     PageListComponent,
+    RandomPhotosComponent,
+    RandomPhotosButtonComponent,
+    RandomPhotosDisplayComponent,
   ],
   imports: [
     BrowserModule,
