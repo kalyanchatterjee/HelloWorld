@@ -17,7 +17,7 @@ export class AppComponent {
 
   onTerm(term: string) {
     this.wikiservice.getPosts(term).subscribe((pages) => {
-      // console.log(pages);
+      console.log(pages);
       this.posts = pages;
     });
   }

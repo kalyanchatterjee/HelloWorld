@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-random-photos',
+  selector: 'random-photos',
   templateUrl: './random-photos.component.html',
-  styleUrls: ['./random-photos.component.css']
+  styleUrls: ['./random-photos.component.css'],
 })
 export class RandomPhotosComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
