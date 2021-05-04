@@ -1,1 +1,8 @@
-<p>random-photos works!</p>
+<div>
+  <button class="btn btn-primary btn-small" (click)="getRandomImage()">
+    Get Random Photo
+  </button>
+  <div class="imageContainer">
+    <img src="{{ imageSource }}" class="img-fluid" />
+  </div>
+</div>

@@ -10,8 +10,7 @@ export class PhotosService {
   constructor(private httpClient: HttpClient) {}
 
   getRandomPhoto(): Observable<Photo> {
-    const url =
-      'https://api.unsplash.com/photos/?client_id=z9YfG0cmEdUZ1Zh-vsJv9REPWEo0MhcTqnx4g7Bref8';
+    const url = 'https://api.unsplash.com/photos/random/';
 
     return this.httpClient.get<Photo>(url, {
       params: {
