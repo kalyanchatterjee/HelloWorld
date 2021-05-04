@@ -17,6 +17,7 @@ import { InputComponent } from './components/input/input.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { PageListComponent } from './components/page-list/page-list.component';
 import { RandomPhotosComponent } from './components/random-photos/random-photos.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { RandomPhotosComponent } from './components/random-photos/random-photos.
     SearchBarComponent,
     PageListComponent,
     RandomPhotosComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,
